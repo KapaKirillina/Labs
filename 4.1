@@ -1,1 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float a, b;
+	float S, P;
+	printf("Введите стороны прямоугольника через пробел \n");
+	scanf_s("%f %f", &a, &b);
+	S = a * b;
+	P = 2 * (a + b);
+	printf("Площадь прямоугольника равна %f \n", S);
+	printf("Периметр прямоугольника равен %f \n", P);
+	return 0;
+}
 
