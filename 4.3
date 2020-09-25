@@ -1,1 +1,14 @@
-
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float a, b;
+	float x;
+	printf("Введите два числа через пробел \n");
+	scanf_s("%f %f", &a, &b);
+	x = (a + b) / 2;
+	printf("Среднее арифметическое равно %f \n", x);
+	return 0;
+}
