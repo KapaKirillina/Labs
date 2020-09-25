@@ -1,1 +1,14 @@
-
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float d, pi = 3.14;
+	float L;
+	printf("Введите диаметр окружности \n");
+	scanf_s("%f", &d);
+	L = d * pi;
+	printf("Длина окружности равна %f \n", L);
+	return 0;
+}
