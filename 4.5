@@ -1,1 +1,23 @@
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float a, b;
+	float sum, r, p, d;
+	printf("Введите два  ненулевых числа через пробел \n");
+	scanf_s("%f %f", &a, &b);
+	a = fabs(a);
+	b = fabs(b);
+	sum = a + b;
+	r = a - b;
+	p = a * b;
+	d = a / b;
+	printf("Сумма их модулей равна %f \n", sum);
+	printf("Разность их модулей равна %f \n", r);
+	printf("Произведение их модулей равна %f \n", p);
+	printf("Частное их модулей равна %f \n", d);
+	return 0;
+}
