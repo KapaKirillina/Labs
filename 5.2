@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B, C;
+	printf("Введите значения точек A, B, C\n");
+	scanf_s("%d %d %d", &A, &B, &C);
+	int AC, BC, sum;
+	AC = abs(A - C);
+	BC = abs(B - C);
+	sum = AC + BC;
+	printf("Длина AC равна %d, длина BC равна %d, их сумма равна %d", AC, BC, sum);
+	return 0;
+}
