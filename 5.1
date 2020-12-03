@@ -1,1 +1,17 @@
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int x1, x2, y1, y2;
+	printf("Введите координаты первой точки\n");
+	scanf_s("%d %d", &x1, &y1);
+	printf("Введите координаты второй точки\n");
+	scanf_s("%d %d", &x2, &y2);
+	double l;
+	l = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2)*(y1 - y2));
+	printf("Расстояние между двумя точками равно %f", l);
+	return 0;
+}
