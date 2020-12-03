@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B, C;
+	printf("Введите значения точек A, B, C (Точка C расположена между точками A и B)\n");
+	scanf_s("%d %d %d", &A, &B, &C);
+	int AC, BC, p;
+	AC = abs(A - C);
+	BC = abs(B - C);
+	p = AC * BC;
+	printf("Произведение длин отрезков AC, BC равна %d", p);
+	return 0;
+}
