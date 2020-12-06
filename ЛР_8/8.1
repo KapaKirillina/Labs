@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	printf("Введите размер файла в байтах\n");
+	int b;
+	scanf_s("%d", &b);
+	int kb = b / 1024;
+	printf("Количество полных килобайтов, которые занимает данный файл, равно %d", kb);
+	return 0;
+}
