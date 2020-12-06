@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	const double PI = 3.14159265;
+	int a;
+	printf("Введите значение a в градусах\n");
+	scanf_s("%d", &a);
+	float a1 = PI / 180 * a;
+	printf("%d\xB0 =  %f радиан", a, a1);
+	return 0;
+}
