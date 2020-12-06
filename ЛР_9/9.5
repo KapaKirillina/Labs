@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int y;
+	printf("Введите номер некоторого года\n");
+	scanf_s("%d", &y);
+	int c = (y - 1) / 100 + 1;
+	printf("Номер столетия %d года равен %d", y, c);
+	return 0;
+}
