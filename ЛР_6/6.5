@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float x, y;
+	printf("Введите значение x \n");
+	scanf_s("%f", &x);
+	y = 4 * pow((x - 3), 6) - 7 * pow((x - 3), 2) + 2;
+	printf("Значение функции y=4*(x-3)^6-7*(x-3)^2+2 равно %f \n", y);
+	return 0;
+}
