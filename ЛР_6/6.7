@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float a;
+	printf("Введите число A \n");
+	scanf_s("%f", &a);
+	float a1, a2;
+	a1 = a * a; // a1=a^2
+	a2 = a1 * a; // a2=a^3
+	a = a1 * a2; // a=a^5
+	a1 = a * a; // a1=a^10
+	a = a1 * a; // a=a^15
+	printf("A^15 равно %f", a);
+	return 0;
+}
