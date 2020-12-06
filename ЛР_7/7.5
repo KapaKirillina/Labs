@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float A, B;
+	float X;
+	printf("Введите коэффициенты A и B\n");
+	scanf_s("%f %f", &A, &B);
+	while (A == 0) {
+		printf("A не может быть равно 0. Введите коэффициенты A и B ещё раз\n");
+		scanf_s("%f %f", &A, &B);
+	}
+	X = (-B) / A;
+	printf("X равен %f", X);
+	return 0;
+}
