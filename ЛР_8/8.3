@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	printf("Введите целые положительные числа A и B (A > B)\n");
+	int A, B;
+	scanf_s("%d %d", &A, &B);
+	int i = A / B;
+	int res = A - i * B;
+	printf("Длина незанятой части отрезка A равна %d", res);
+	return 0;
+}
