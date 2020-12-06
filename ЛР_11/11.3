@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float a1, a2, b1, b2, c1, c2;
+	printf("Введите координаты точки A\n");
+	scanf_s("%f %f", &a1, &a2);
+	printf("Введите координаты точки B\n");
+	scanf_s("%f %f", &b1, &b2);
+	printf("Введите координаты точки C\n");
+	scanf_s("%f %f", &c1, &c2);
+	float ac = sqrt(pow(a1 - c1, 2) + pow(a2 - c2, 2));
+	float ab = sqrt(pow(a1 - b1, 2) + pow(a2 - b2, 2));
+	if (ac < ab)
+		printf("Точка C, расстояние от точки A равно %f", ac);
+	else 
+		printf("Точка B, расстояние от точки A равно %f", ab);
+}
