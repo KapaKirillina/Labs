@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int a, b, c;
+	printf("Введите три числа\n");
+	scanf_s("%d %d %d", &a, &b, &c);
+	if ((a < c) && (a < b))
+		printf("%d", b + c);
+	else if ((b < c) && (b < a))
+		printf("%d", a + c);
+	else if ((c < a) && (c < b))
+		printf("%d", a + b);
+}
