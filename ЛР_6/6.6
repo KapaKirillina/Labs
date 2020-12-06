@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float A;
+	printf("Введите число A \n");
+	scanf_s("%f", &A);
+	float a2;
+	a2 = A * A;
+	a2 = a2 * a2;
+	A = a2 * a2;
+	printf("A^8 равно %f", A);
+	return 0;
+}
