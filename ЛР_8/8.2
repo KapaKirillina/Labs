@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	printf("Введите целые положительные числа A и B (A > B)\n");
+	int A, B;
+	scanf_s("%d %d", &A, &B);
+	int res = A / B;
+	printf("Максимальное количество отрезков B, размещенных на отрезке A равно %d", res);
+	return 0;
+}
