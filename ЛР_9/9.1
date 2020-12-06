@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N;
+	printf("Введите N секунд (N - целое)\n");
+	scanf_s("%d", &N);
+	int res = N % 60;
+	printf("С начала последней минуты прошло %d сек.", res);
+	return 0;
+}
