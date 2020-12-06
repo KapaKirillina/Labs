@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int x;
+	printf("Введите целое число\n");
+	scanf_s("%d", &x);
+	if (x == 0)
+		printf("нулевое число");
+	else if ((x > 0) && (x % 2 == 0))
+		printf("положительное четное число");
+	else if ((x > 0) && (x % 2 != 0))
+		printf("положительное нечетное число");
+	else if ((x < 0) && (x % 2 == 0))
+		printf("отрицательное четное число");
+	else if ((x < 0) && (x % 2 != 0))
+		printf("отрицательное нечетное число");
+}
