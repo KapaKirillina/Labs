@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B, C;
+	printf("Введите три целых числа: A, B, C\n");
+	scanf_s("%d %d %d", &A, &B, &C);
+	if ((A < B) && (B < C))
+		printf("true");
+	else
+		printf("false");
+}
