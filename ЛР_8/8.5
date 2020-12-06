@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	printf("Введите трёхзначное число\n");
+	int x;
+	scanf_s("%d", &x);
+	int res = x / 100 + (x % 100) * 10;
+	printf("%d", res);
+	return 0;
+}
