@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int K;
+	printf("Введите значение K\n");
+	scanf_s("%d", &K);
+	int res = K % 7;
+	printf("Номер дня недели для %d-го дня года равен %d", K, res);
+	return 0;
+}
