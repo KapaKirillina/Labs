@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float X, A, Y, Y1;
+	printf("Известно, что X кг конфет стоит A рублей. Введите значения X и A через пробел\n");
+	scanf_s("%f %f", &X, &A);
+	printf("Введите значение Y\n");
+	scanf_s("%f", &Y);
+	float Z = A / X;
+	Y1 = Z * Y;
+	printf("1 кг конфет стоит %f руб и %.2f кг конфет стоят %f руб", Z, Y, Y1);
+	return 0;
+}
