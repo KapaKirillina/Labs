@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B, C;
+	printf("Введите целые положительные числа A, B, C\n");
+	scanf_s("%d %d %d", &A, &B, &C);
+	int k = (A / C) * (B / C);
+	int S = (A * B) - (k * C * C);
+	printf("Количество квадратов, размещенных на прямоугольнике, равно %d. Площадь незанятой части прямоугольника равна %d.", k, S);
+	return 0;
+}
