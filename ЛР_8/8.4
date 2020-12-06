@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	printf("Введите двухзначное число\n");
+	int x;
+	scanf_s("%d", &x);
+	int res = x / 10 + (x % 10) * 10;
+	printf("%d", res);
+	return 0;
+}
