@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float A, B, C;
+	printf("Введите числа A, B и C через пробел \n");
+	scanf_s("%f %f %f", &A, &B, &C);
+	float D;
+	D = A;
+	A = C;
+	C = B;
+	B = D;
+	printf("A=%f, B=%f и C=%f", A, B, C);
+	return 0;
+}
