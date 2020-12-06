@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B;
+	printf("Введите целые числа A и B\n");
+	scanf_s("%d %d", &A, &B);
+	if ((A > 2) & (B <= 3))
+		printf("true");
+	else
+		printf("false");
+}
