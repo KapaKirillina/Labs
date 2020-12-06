@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float x, y;
+	printf("Введите значение x \n");
+	scanf_s("%f", &x);
+	y = 3 * pow(x, 6) - 6 * pow(x, 2) - 7;
+	printf("Значение функции y=3*x^6-6*x^2-7 равно %f \n", y);
+	return 0;
+}
