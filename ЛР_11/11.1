@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B;
+	printf("Введите переменные целого типа A и B\n");
+	scanf_s("%d %d", &A, &B);
+	if (A != B) {
+		if (A > B) {
+			B = A;
+			printf("A=%d, B=%d", A, B);
+		}
+		else {
+			A = B;
+			printf("A=%d, B=%d", A, B);
+		}
+	}
+	else {
+		A = 0;
+		B = 0;
+		printf("A=%d, B=%d", A, B);
+	}
+}
