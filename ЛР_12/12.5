@@ -31,61 +31,60 @@ int main()
 		break;
 	}
 
-	switch ((n + 1) % 5) {
+	switch (n % 12) {
 	case 0:
-	case 1:
 	case 2:
 	case 3:
 	case 4:
-	case 5:
 	case 9:
 	case 10:
 	case 11:
 		printf("ой ");
 		break;
+	case 1:
+	case 5:
 	case 6:
 	case 7:
 	case 8:
 		printf("ого ");
 		break;
 	}
-
-	switch ((n + 8) % 12) {
+	switch (n % 12) {
 	case 0:
-		printf("крысы\n");
-		break;
-	case 1:
-		printf("коровы\n");
-		break;
-	case 2:
-		printf("тигра\n");
-		break;
-	case 3:
-		printf("зайца\n");
-		break;
-	case 4:
-		printf("дракона\n");
-		break;
-	case 5:
-		printf("змеи\n");
-		break;
-	case 6:
-		printf("лошади\n");
-		break;
-	case 7:
-		printf("овцы\n");
-		break;
-	case 8:
 		printf("обезьяны\n");
 		break;
-	case 9:
-		printf("курицы\n");
+	case 1:
+		printf("петуха\n");
 		break;
-	case 10:
+	case 2:
 		printf("собаки\n");
 		break;
-	case 11:
+	case 3:
 		printf("свиньи\n");
+		break;
+	case 4:
+		printf("крысы\n");
+		break;
+	case 5:
+		printf("быка\n");
+		break;
+	case 6:
+		printf("тигра\n");
+		break;
+	case 7:
+		printf("кролика\n");
+		break;
+	case 8:
+		printf("дракона\n");
+		break;
+	case 9:
+		printf("змеи\n");
+		break;
+	case 10:
+		printf("лошади\n");
+		break;
+	case 11:
+		printf("овцы\n");
 		break;
 	}
 	return 0;
