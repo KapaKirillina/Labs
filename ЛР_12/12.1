@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 int main()
 {
 	system("chcp 1251");
@@ -8,143 +7,140 @@ int main()
 	int d, m;
 	printf("Введите номер дня и номер месяца\n");
 	scanf_s("%d %d", &d, &m);
-	char month[10];
-	switch (m)
-	{
-	case 1:
-		strcpy_s(month, "января");
-		break;
-	case 2:
-		strcpy_s(month, "февраля");
-		break;
-	case 3:
-		strcpy_s(month, "марта");
-		break;
-	case 4:
-		strcpy_s(month, "апреля");
-		break;
-	case 5:
-		strcpy_s(month, "мая");
-		break;
-	case 6:
-		strcpy_s(month, "июня");
-		break;
-	case 7:
-		strcpy_s(month, "июля");
-		break;
-	case 8:
-		strcpy_s(month, "августа");
-		break;
-	case 9:
-		strcpy_s(month, "сентября");
-		break;
-	case 10:
-		strcpy_s(month, "октября");
-		break;
-	case 11:
-		strcpy_s(month, "ноября");
-		break;
-	case 12:
-		strcpy_s(month, "декабря");
-		break;
-	}
-	char date[20];
 	switch (d)
 	{
 	case 1:
-		strcpy_s(date, "первое");
+		printf("первое ");
 		break;
 	case 2:
-		strcpy_s(date, "второе");
+		printf("второе ");
 		break;
 	case 3:
-		strcpy_s(date, "третье");
+		printf("третье ");
 		break;
 	case 4:
-		strcpy_s(date, "четвертое");
+		printf("четвертое ");
 		break;
 	case 5:
-		strcpy_s(date, "пятое");
+		printf("пятое ");
 		break;
 	case 6:
-		strcpy_s(date, "шестое");
+		printf("шестое ");
 		break;
 	case 7:
-		strcpy_s(date, "седьмое");
+		printf("седьмое ");
 		break;
 	case 8:
-		strcpy_s(date, "восьмое");
+		printf("восьмое ");
 		break;
 	case 9:
-		strcpy_s(date, "девятое");
+		printf("девятое ");
 		break;
 	case 10:
-		strcpy_s(date, "десятое");
+		printf("десятое ");
 		break;
 	case 11:
-		strcpy_s(date, "одиннадцатое");
+		printf("одиннадцатое ");
 		break;
 	case 12:
-		strcpy_s(date, "двенадцатое");
+		printf("двенадцатое ");
 		break;
 	case 13:
-		strcpy_s(date, "тринадцатое");
+		printf("тринадцатое ");
 		break;
 	case 14:
-		strcpy_s(date, "четырнадцатое");
+		printf("четырнадцатое ");
 		break;
 	case 15:
-		strcpy_s(date, "пятнадцатое");
+		printf("пятнадцатое ");
 		break;
 	case 16:
-		strcpy_s(date, "шестнадцатое");
+		printf("шестнадцатое ");
 		break;
 	case 17:
-		strcpy_s(date, "семнадцатое");
+		printf("семнадцатое ");
 		break;
 	case 18:
-		strcpy_s(date, "восемнадцатое");
+		printf("восемнадцатое ");
 		break;
 	case 19:
-		strcpy_s(date, "девятнадцатое");
+		printf("девятнадцатое ");
 		break;
 	case 20:
-		strcpy_s(date, "двадцатое");
+		printf("двадцатое ");
 		break;
 	case 21:
-		strcpy_s(date, "двадцать первое");
+		printf("двадцать первое ");
 		break;
 	case 22:
-		strcpy_s(date, "двадцать второе");
+		printf("двадцать второе ");
 		break;
 	case 23:
-		strcpy_s(date, "двадцать третье");
+		printf("двадцать третье ");
 		break;
 	case 24:
-		strcpy_s(date, "двадцать четвертое");
+		printf("двадцать четвертое ");
 		break;
 	case 25:
-		strcpy_s(date, "двадцать пятое");
+		printf("двадцать пятое ");
 		break;
 	case 26:
-		strcpy_s(date, "двадцать шестое");
+		printf("двадцать шестое ");
 		break;
 	case 27:
-		strcpy_s(date, "двадцать седьмое");
+		printf("двадцать седьмое ");
 		break;
 	case 28:
-		strcpy_s(date, "двадцать восьмое");
+		printf("двадцать восьмое ");
 		break;
 	case 29:
-		strcpy_s(date, "двадцать девятое");
+		printf("двадцать девятое ");
 		break;
 	case 30:
-		strcpy_s(date, "тридцатое");
+		printf("тридцатое ");
 		break;
 	case 31:
-		strcpy_s(date, "тридцать первое");
+		printf("тридцать первое ");
 		break;
 	}
-	printf("%s %s", date, month);
+	switch (m)
+	{
+	case 1:
+		printf("января");
+		break;
+	case 2:
+		printf("февраля");
+		break;
+	case 3:
+		printf("марта");
+		break;
+	case 4:
+		printf("апреля");
+		break;
+	case 5:
+		printf("мая");
+		break;
+	case 6:
+		printf("июня");
+		break;
+	case 7:
+		printf("июля");
+		break;
+	case 8:
+		printf("августа");
+		break;
+	case 9:
+		printf("сентября");
+		break;
+	case 10:
+		printf("октября");
+		break;
+	case 11:
+		printf("ноября");
+		break;
+	case 12:
+		printf("декабря");
+		break;
+	}
 	return 0;
 }
