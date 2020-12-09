@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int M, N, i, j, A[20][20];
+	printf("Введите размер матрицы\n");
+	scanf_s("%d %d", &M, &N);
+	printf("Введите элементы матрицы\n");
+	for (i = 0; i < M; i++) {
+		for (j = 0; j < N; j++) {
+			scanf_s("%d", &A[i][j]);
+		}
+	}
+	printf("\n");
+	int max = A[0][0], min = A[0][0], max_j = 0, min_j = 0, temp;
+	for (i = 0; i < M; i++) {
+		for (j = 0; j < N; j++) {
+			if (max < A[i][j]) {
+				max_j = j;
+				max = A[i][j];
+			}
+			if (min > A[i][j]) {
+				min_j = j;
+				min = A[i][j];
+			}
+		}
+	}
+	if (min_j == max_j) {
+		printf("Минимальный и максимальный элементы находятся в одном столбце\n");
+	}
+	for (i = 0; i < M; i++) {
+		temp = A[i][min_j];
+		A[i][min_j] = A[i][max_j];
+		A[i][max_j] = temp;
+	}
+	for (i = 0; i < M; i++) {
+		for (j = 0; j < N; j++) {
+			printf("%d ", A[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
