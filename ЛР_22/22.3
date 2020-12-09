@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int M, N, i, j, A[20][20];
+	printf("Введите размер матрицы\n");
+	scanf_s("%d %d", &M, &N);
+	printf("Введите элементы матрицы\n");
+	for (i = 1; i <= M; i++) {
+		for (j = 1; j <= N; j++) {
+			scanf_s("%d", &A[i][j]);
+		}
+	}
+	printf("\n");
+	int temp;
+	for (i = 1; i <= (M / 2); i++) {
+		for (j = 1; j <= (N / 2); j++) {
+			temp = A[i][j];
+			A[i][j] = A[(M / 2) + i][(N / 2) + j];
+			A[(M / 2) + i][(N / 2) + j] = temp;
+		}
+	}
+	for (i = 1; i <= M; i++) {
+		for (j = 1; j <= N; j++) {
+			printf("%d ", A[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
