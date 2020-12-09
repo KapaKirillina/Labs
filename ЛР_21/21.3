@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int M, N, i, j;
+	int A[20][20];
+	printf("Введите размер матрицы (M на N)\n");
+	scanf_s("%d %d", &M, &N);
+	printf("Введите элементы матрицы\n");
+	for (i = 1; i <= M; i++) {
+		for (j = 1; j <= N; j++) {
+			scanf_s("%d", &A[i][j]);
+		}
+	}
+	int min = 1, p;
+	for (i = 1, j = 1; i <= M; i++) {
+		min *= A[i][j];
+	}
+	int num = 1;
+	for (j = 1; j <= N; j++) {
+		p = 1;
+		for (i = 1; i <= M; i++) {
+			p *= A[i][j];
+		}
+		if (p < min) {
+			min = p;
+			num = j;
+		}
+	}
+	printf("Номер столбца (начианая с 1) с наименьшим произведением элементов равен %d\n", num);
+	printf("Наименьшее произведение %d", min);
+	return 0;
+}
