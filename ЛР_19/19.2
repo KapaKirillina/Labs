@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, K, i, j, Ai;
+	printf("Введите размер массива\n");
+	scanf_s("%d", &N);
+	int* A = new int[N];
+	printf("Введите элементы массива A\n");
+	for (i = 0; i < N; i++) {
+		scanf_s("%d", &A[i]);
+	}
+	int num;
+	for (i = 0; i < N; i++) {
+		num = 0;
+		for (j = 0; j < N; j++) {
+			if (A[i] == A[j])
+				num++;
+		}
+		if (num == 2) {
+			K = i - 1;
+			Ai = A[i];
+			for (j = i; j < N; j++) {
+				if (A[j] != Ai) {
+					K++;
+					A[K] = A[j];
+				}
+			}
+			N = K + 1;
+			i--;
+		}
+	}
+	printf("Размер полученного массива равен %d\n", N);
+	for (i = 0; i < N; i++) {
+		printf("%d ", A[i]);
+	}
+	return 0;
+}
