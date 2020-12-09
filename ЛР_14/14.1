@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B;
+	printf("Введите целые положительные числа A и B (A<B)\n");
+	scanf_s("%d %d", &A, &B);
+	int i, j;
+	int N = B - A + 1;
+	for (i = 1; i <= N; i++) {
+		for (j = 1; j <= A; j++) {
+			printf("%d ", A);
+		}
+		A++;
+	}
+	return 0;
+}
