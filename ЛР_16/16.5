@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, i;
+	printf("Введите целое число N\n");
+	scanf_s("%d", &N);
+	int* A = new int[N];
+	printf("Введите элементы массива\n");
+	for (i = 0; i < N; i++) {
+		printf("A[%d]: ", i);
+		scanf_s("%d", &A[i]);
+	}
+	printf("Элементы с нечетными номерами в порядке возрастания номеров:\n");
+	for (i = 1; i < N; i += 2) {
+		printf("%d ", A[i]);
+	}
+	printf("\nЭлементы с четными номерами в порядке убывания номеров:\n");
+	if (N % 2 == 0) {
+		for (i = N - 2; i >= 0; i -= 2) {
+			printf("%d ", A[i]);
+		}
+
+	}
+	else {
+		for (i = N - 1; i >= 0; i -= 2) {
+			printf("%d ", A[i]);
+		}
+	}
+	return 0;
+}
