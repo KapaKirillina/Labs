@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+float RingS(float R1, float R2)
+{
+	float S = 3.14 * (R1 * R1 - R2 * R2);
+	return S;
+}
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float R1, R2;
+	for (int i = 1; i <= 3; i++) {
+		printf("Введите радиусы R1, R2 (R1 > R2)\n");
+		scanf_s("%f %f", &R1, &R2);
+		float S = RingS(R1, R2);
+		printf("Площадь кольца равна %f\n", S);
+	}
+	return 0;
+}
