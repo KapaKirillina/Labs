@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, i;
+	printf("Введите размер массива\n");
+	scanf_s("%d", &N);
+	int* A = new int[N];
+	printf("Введите элементы массива\n");
+	for (i = 1; i <= N; i++) {
+		scanf_s("%d", &A[i]);
+	}
+	int max = 0;
+	for (i = 2; i < N; i++) {
+		if ((A[i] > A[i - 1]) && (A[i] > A[i + 1])) {
+			max = i;
+		}
+	}
+	printf("%d", max);
+	return 0;
+}
