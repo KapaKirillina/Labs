@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N;
+	float A, sum = 0;
+	printf("Введите целое и вещественное число\n");
+	scanf_s("%d %f", &N, &A);
+	for (int i = 0; i <= N; i++) {
+		sum += pow((-A), i);
+	}
+	printf("%f", sum);
+	return 0;
+}
