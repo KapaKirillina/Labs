@@ -1,0 +1,21 @@
+#include <stdio.h>
+int Sign(float X)
+{
+	if (X < 0)
+		return -1;
+	else if (X == 0)
+		return 0;
+	else
+		return 1;
+}
+int main()
+{
+	float A, B;
+	printf("A: ");
+	scanf_s("%f", &A);
+	printf("B: ");
+	scanf_s("%f", &B);
+	int res = Sign(A) + Sign(B);
+	printf("%d", res);
+	return 0;
+}
