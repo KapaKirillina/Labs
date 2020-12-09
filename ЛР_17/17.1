@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, K, L, i;
+	float sum = 0;
+	printf("Введите целые число N, K, L (1 <= K <= L <= N)\n");
+	scanf_s("%d %d %d", &N, &K, &L);
+	int* A = new int[N];
+	printf("Введите элементы массива\n");
+	for (i = 1; i <= N; i++) {
+		scanf_s("%d", &A[i]);
+	}
+	for (i = K; i <= L; i++) {
+		sum += A[i];
+	}
+	float average = sum / (L - K + 1);
+	printf("%f", average);
+	return 0;
+}
