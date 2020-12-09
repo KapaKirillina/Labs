@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B;
+	printf("Введите два целых положительных числа\n");
+	scanf_s("%d %d", &A, &B);
+	while ((A != 0) && (B != 0)) {
+		if (A > B) {
+			A = A % B;
+		}
+		else
+			B = B % A;
+
+	}
+	printf("Наибольший общий делитель равен %d", A + B);
+	return 0;
+}
