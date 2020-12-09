@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float p;
+	printf("Введите цену за 1кг конфет\n");
+	scanf_s("%f", &p);
+	for (float i = 0.1; i <= 1; i += 0.1) {
+		float x=0;
+		x = i * p;
+		printf("Стоимость %.1f кг конфет равно %.2f\n", i, x);
+	}
+	return 0;
+}
