@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N;
+	double p = 1;
+	float x = 1.1;
+	printf("Введите целое число\n");
+	scanf_s("%d", &N);
+	for (int kol = 0; kol < N; kol++) {
+		p *= x;
+		x += 0.1;
+	}
+	printf("%f", p);
+	return 0;
+}
