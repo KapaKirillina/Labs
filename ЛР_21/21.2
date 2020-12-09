@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int M, N, K, i, j;
+	int A[20][20];
+	printf("Введите размер матрицы (M на N)\n");
+	scanf_s("%d %d", &M, &N);
+	printf("Введите целое число K (1<=K<=M)\n");
+	scanf_s("%d", &K);
+	printf("Введите элементы матрицы\n");
+	for (i = 1; i <= M; i++) {
+		for (j = 1; j <= N; j++) {
+			scanf_s("%d", &A[i][j]);
+		}
+	}
+	i = K;
+	int sum = 0, p = 1;
+	for (j = 1; j <= N; j++) {
+		sum += A[i][j];
+		p *= A[i][j];
+	}
+	printf("Сумма и произведение элементов K-й строки данной матрицы равна %d, %d", sum, p);
+	return 0;
+}
