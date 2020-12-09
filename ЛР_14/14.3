@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N;
+	printf("Введите целое число N (N>1)\n");
+	scanf_s("%d", &N);
+	int sum = 0, K = 0;
+	do {
+		K++;
+		sum += K;
+	} while (sum < N);
+	printf("K=%d\nСумма равна %d", K, sum);
+	return 0;
+}
