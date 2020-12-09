@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, A, B, i;
+	printf("Введите целое число N (N>2), A и B\n");
+	scanf_s("%d %d %d", &N, &A, &B);
+	int* a = new int[N];
+	a[0] = A;
+	a[1] = B;
+	a[2] = A + B;
+	for (i = 3; i < N; i++) {
+		a[i] = a[i - 1] * 2;
+	}
+	for (i = 0; i < N; i++) {
+		printf("%d ", a[i]);
+	}
+	return 0;
+}
