@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	float P, C = 1000.0;
+	int K=0;
+	printf("Введите P (0 < P < 25)\n");
+	scanf_s("%f", &P);
+	while (C <= 1100) {
+		C *= (100 + P) / 100;
+		K++;
+	}
+	printf("Через %d мес. размер вклада превысит 1100 руб. Итоговый размер вклада равен %f", K, C);
+	return 0;
+}
