@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int M, N, i, j;
+	int A[20][20];
+	printf("Введите размер матрицы (M на N)\n");
+	scanf_s("%d %d", &M, &N);
+	printf("Введите элементы матрицы\n");
+	for (i = 1; i <= M; i++) {
+		for (j = 1; j <= N; j++) {
+			scanf_s("%d", &A[i][j]);
+		}
+	}
+	int kol;
+	float average, sum;
+	for (j = 1; j <= N; j++) {
+		sum = 0;
+		kol = 0;
+		for (i = 1; i <= M; i++) {
+			sum += A[i][j];
+		}
+		average = sum / M;
+		for (i = 1; i <= M; i++) {
+			if (A[i][j] > average) {
+				kol++;
+			}
+		}
+		printf("В столбце %d количество элементов, больших среднего арифметического всех элементов этого столбца равно %d\n", j, kol);
+	}
+	return 0;
+}
