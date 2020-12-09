@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, i;
+	printf("Введите размер массива\n");
+	scanf_s("%d", &N);
+	int* A = new int[N];
+	printf("Введите элементы массива\n");
+	for (i = 1; i <= N; i++) {
+		printf("A[%d]: ", i);
+		scanf_s("%d", &A[i]);
+	}
+	int min = A[2];
+	for (i = 2; i <= N; i += 2) {
+		if (A[i] < min) {
+			min = A[i];
+		}
+	}
+	printf("%d", min);
+	return 0;
+}
