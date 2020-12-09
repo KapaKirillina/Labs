@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, i;
+	printf("Введите целое число N\n");
+	scanf_s("%d", &N);
+	int* A = new int[N];
+	printf("Введите элементы массива\n");
+	for (i = 0; i < N; i++) {
+		scanf_s("%d", &A[i]);
+	}
+	for (i = 0; i < N / 2; i++) {
+		printf("%d ", A[i]);
+		printf("%d ", A[N - i - 1]);
+	}
+	if (N % 2 > 0) {
+		printf("%d", A[N / 2]);
+	}
+	return 0;
+}
