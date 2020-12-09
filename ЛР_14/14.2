@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int A, B;
+	printf("Введите целые положительные числа A и B (A>B)\n");
+	scanf_s("%d %d", &A, &B);
+	int sum = 0;
+	do {
+		sum = A % B;
+	} while (sum >= B);
+	printf("%d", sum);
+	return 0;
+}
