@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int M, i, j, A[20][20];
+	printf("Введите ранг матрицы\n");
+	scanf_s("%d", &M);
+	printf("Введите элементы матрицы\n");
+	for (i = 1; i <= M; i++) {
+		for (j = 1; j <= M; j++) {
+			scanf_s("%d", &A[i][j]);
+		}
+	}
+	int B[100];
+	int sum, sum1, i2, n;
+	for (n = 1; n < M; n++) {
+		sum = 0;
+		sum1 = 0;
+		i2 = 1;
+		while (i2 <= n) {
+			sum += A[i2][M - n + i2];
+			sum1 += A[M - n + i2][i2];
+			i2++;
+		}
+		B[n] = sum;
+		B[2 * M - n] = sum1;
+	}
+	sum = 0;
+	for (i = 1, j = 1; i <= M; i++, j++) {
+		sum += A[i][j];
+	}
+	B[M] = sum;
+	printf("\nПодсчет суммы начинается с элемента A[1][%d]\n", M);
+	for (n = 1; n <= (2 * M - 1); n++) {
+		printf("%d ", B[n]);
+	}
+	return 0;
+}
