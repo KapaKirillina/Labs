@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, i, kol = 0;
+	printf("Введите размер массива\n");
+	scanf_s("%d", &N);
+	int* A = new int[N];
+	printf("Введите элементы массива\n");
+	for (i = 1; i <= N; i++) {
+		scanf_s("%d", &A[i]);
+	}
+	int d = A[2] - A[1];
+	for (i = 1; i <= N; i++) {
+		if (A[i] == A[1] + (i - 1) * d) {
+			kol++;
+		}
+	}
+	if (kol == N) {
+		printf("Разность арифметической прогрессии равна %d", d);
+	}
+	else
+		printf("0");
+	return 0;
+}
