@@ -1,0 +1,18 @@
+#include <stdio.h>
+double Fact2(int N)
+{
+	double f = 1;
+	while (N > 0) {
+			f *= N;
+			N -= 2;
+		}
+	return f;
+}
+int main()
+{
+	int N;
+	printf("N: ");
+	scanf_s("%d", &N);
+	printf("Fact2 = %f", Fact2(N));
+	return 0;
+}
