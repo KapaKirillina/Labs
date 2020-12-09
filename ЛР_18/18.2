@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	system("chcp 1251");
+	system("cls");
+	int N, K, i;
+	printf("Введите размер массива\n");
+	scanf_s("%d", &N);
+	int* A = new int[N];
+	float* B = new float[N];
+	printf("Введите элементы массива A\n");
+	for (i = 0; i < N; i++) {
+		scanf_s("%d", &A[i]);
+	}
+	for (K = 0; K < N; K++) {
+		float sum = 0;
+		for (i = 0; i <= K; i++) {
+			sum += A[i];
+		}
+		B[K] = sum / (K + 1);
+	}
+	for (K = 0; K < N; K++) {
+		printf("%f ", B[K]);
+	}
+	return 0;
+}
